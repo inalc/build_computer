@@ -4,5 +4,6 @@ $(document).ready(function() {
 });
 
 function makeCat() {
-  $('.cat').append('<div class=head></div>')
+  $('.cat').append('<div class=head id=floating></div>');
+
 }

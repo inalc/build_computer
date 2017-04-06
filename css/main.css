@@ -6,6 +6,7 @@ h1 {
   background: linear-gradient(to bottom right, #6b123b, #2b1560);
   height: 100%;
   width:100%;
+  position: absolute;
 }
 
 .head {
@@ -13,4 +14,34 @@ h1 {
   width: 50px;
   height: 50px;
   position: relative;
+  margin: auto;
+  margin-top: 20%;
+  border-radius: 30px;
+}
+
+#floating{
+    float: left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
 }
