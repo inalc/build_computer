@@ -19,18 +19,35 @@ h1 {
   border-radius: 30px;
 }
 
-#floating{
+.speechbubble {
+  background-color: #f0ff91;
+  width: 200px;
+  height: auto;
+  min-height: 100px;
+  max-height: 200px;
+  overflow: auto;
+  position: relative;
+  margin: auto;
+  margin-left: -10px;
+  margin-top: 15%;
+  border-radius: 10px;
+  opacity: 0.5;
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+#floating {
     float: left;
     -webkit-animation-name: Floatingx;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 4s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     -moz-animation-name: Floating;
     -moz-animation-duration: 3s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
+    margin-left: 25%;
+    margin-top: 20%;
 
 }
 
