@@ -2,24 +2,73 @@ h1 {
   color: red;
 }
 
+body {
+  display: block;
+}
+
+.situation-text, .option{
+  font-family: monospace;
+  font-size: 20px;
+}
+
+
 .container {
-  background: linear-gradient(to bottom right, #3a0a26, #383135);
+  display: table;
+  position: absolute;
   height: 100%;
-  width:100%;
-
+  width: 100%;
+  background: linear-gradient(to bottom right, #3a0a26, #383135);
 }
 
-.head {
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  position: relative;
-  margin: auto;
-  margin-top: 20%;
-  border-radius: 30px;
+.middle-section {
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.speechbubble {
+.main-content {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  width: 600px;
+}
+
+
+p {
+  color: white;
+}
+
+.cat {
+  width: 10%;
+  margin: 0 auto;
+}
+
+#floating {
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes Floatingx{
+  from {-webkit-transform:translate(0, 0px);}
+  65% {-webkit-transform:translate(0, 15px);}
+  to {-webkit-transform: translate(0, -0px);}    
+}
+    
+@-moz-keyframes Floating{
+  from {-moz-transform:translate(0, 0px);}
+  65% {-moz-transform:translate(0, 15px);}
+  to {-moz-transform: translate(0, -0px);}    
+}
+
+
+/*.speechbubble {
   background-color: #f0ff91;
   width: 200px;
   height: auto;
@@ -28,41 +77,8 @@ h1 {
   overflow: auto;
   position: relative;
   margin: auto;
-  margin-left: -10px;
-  margin-top: 15%;
   border-radius: 10px;
   opacity: 0.7;
   display: inline-block;
   padding: 20px 10px;
-}
-
-.nav {
-  background-color: #091933;
-}
-
-#floating {
-    float: left;
-    -webkit-animation-name: Floatingx;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: Floating;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
-    margin-left: 25%;
-    margin-top: 20%;
-
-}
-
-@-webkit-keyframes Floatingx{
-    from {-webkit-transform:translate(0, 0px);}
-    65% {-webkit-transform:translate(0, 15px);}
-    to {-webkit-transform: translate(0, -0px);    }    
-}
-    
-@-moz-keyframes Floating{
-    from {-moz-transform:translate(0, 0px);}
-    65% {-moz-transform:translate(0, 15px);}
-    to {-moz-transform: translate(0, -0px);}    
-}
+}*/
