@@ -1,39 +1,47 @@
 $(document).ready(function() {
-  showCat();
-  //makeDialog();
+  
 
 
-  var $allSituations = $('.situation');
-  var $defaultSituation = $('.default-situation');
+
+  var $allScenes = $('.scene');
+  var $defaultScene = $('.default-scene');
   var $allOptions = $('.option');
 
-  $allSituations.hide();
+  $allScenes.hide();
   $allOptions.hide();
-  $defaultSituation.fadeIn(2000);
+  $defaultScene.fadeIn(200);
   $allOptions.delay(4000).fadeIn(2000);
 
   $('.option').on('click', function() {
-  	var targetName = $(this).data('situation-target');
-  	var $target = $('.situation[data-situation="' + targetName + '"]')
 
-  	if($target.length == 1) {
-  		$allSituations.hide();
-  		$target.fadeIn(3000);
+
+    var targetName = $(this).data('target');
+    console.log(targetName);
+  	var $target = $('#' + targetName);
+
+  	if($target.length === 1) {
+  		$allScenes.hide();
+      $allOptions.hide();
+
+  		$target.fadeIn(2000);
+      $allOptions.delay(5000).fadeIn('slow');
   	}
+
+    if(targetName == "transition"){
+      $('.cat').hide();
+    } else {
+      $('.cat').fadeIn('fast');
+    }
+
   });
 
-  //$('.cat').on('click', function() {
 
-  //});
 });
 
 function showCat() {
-  $('.cat').append('<img src="images/cat.png"  id="floating" alt="cat" width="100px" height="100px"></div>');
-
+  $('.cat').fadeIn('fast');
 }
-//<div class=head id=floating>
 
-function makeDialog() {
-  $('.situation-text').append('<div class=speechbubble></div>');
-
+function hideCat() {
+  $('.cat').hide();
 }
