@@ -16,26 +16,36 @@
 
 <body>
   <div class="container">
+    <div class="inventory"><h3>Inventory</h3><br>
+      <p>Intel Core i7-7700K<br>
+      Intel Core i5-7500<br>
+      Intel Pentium G4560<br>
+      AMD Ryzen 7 1800X<br>
+      AMD Ryzen 5 1600<br>
+      AMD FX 8350
+
+
+
+
+      </p>
+    </div>
     <div class="middle-section">
+      
       <img src="images/cat.png" class="cat" id="floating" alt="cat" width="200px" height="200px" />
       <div class="main-content">
         <div class="scene default-scene" id="start">
           <p>Welcome to Ina's Computer Shop. We build and repair computers.<br><br>
 
-          <!--add another div of how may i help you etc -->
+          Oh! You must be the new trainee. My name's Matt: the best cat employee in this place and the best manager as of today. We've been in need of help ever since two of our employees disappeared all of a sudden. I hired someone last week, but he only comes in part-time.<br><br>
 
-          Oh! You must be the new trainee. I heard that you're the only candidate who got 100% in our written test. You must be an expert!<br><br>
+          Anyway, I'm so glad you're here! Let's start. Do you have any background in computer hardware?</p><br>
 
-          By the way, my name's Matt: the best cat employee in this place and the best manager as of today. We've been in need of help ever since two of our employees disappeared...<br><br>
-
-          Anyway, I'm so glad you're here! Let's start. </p><br>
-
-          <button type="button" class="option" default-option" data-target="task-intro">- I'm ready!</button><br>
-          <button type="button" class="option" default-option" data-target="no-test">- I don't remember taking a test...</button>
+          <button type="button" class="option" default-option" data-target="task-intro">- Honestly, no. But I'd love to learn!</button><br>
+          <button type="button" class="option" default-option" data-target="no-test">- Sure, I use computers all the time! Mostly for memes.</button>
         </div>
 
         <div class="scene" id="no-test">
-          <p>Really? Well, it doesn't matter. It's only a test of basic knowledge of computer hardware. I'm sure you have some kind of foundation. If not, well then I guess you'll learn a lot today! </p><br>
+          <p>MReally? Well, it doesn't matter. It's only a test of basic knowledge of computer hardware. I'm sure you have some kind of foundation. If not, well then I guess you'll learn a lot today! </p><br>
 
           <button type="button" class="option" data-target="task-intro">- I guess so!</button>
         </div>
@@ -53,7 +63,7 @@
         </div>
 
         <div class="scene" id="help-info">
-        <p>If you really need help, call me by pressing that red button by your side.<br><br>
+        <p>I'll allow you to have three mistakes, but if you keep messing up then unfortunately, that's the end for you.<br><br>
 
         By the way, here's the inventory list. Most of everything's out here in the front, but let me know if we're missing anything and I'll find it for you. <br><br>
 
@@ -63,15 +73,23 @@
         </div>
 
         <div class="scene" id="transition">
-          <p>Wow, my first day. I'm so nervous. I hope there are no customers today. And I wonder what happened to the previous employees?</p><br>
+          <p>Wow, my first day. I'm so nervous. I hope there are no customers today.<br><br>
+          Maybe I should read up on computer basics online.</p><br>
           <button type="button" class="option" data-target="customer1">*A small child walks in*</button>
         </div>
 
         <div class="scene" id="customer1">
-          <p>Hello, my dad gave me this thing and told me to come here to have it replaced. He didn't tell me much, but he was trying to make my computer faster. Do you know what this is?
-
+          <p>Hey Eli, I need help with-- Wait, where's Eli? He told me last week he'd be working everyday this week.</p><br>
+          <button type="button" class="option" data-target="task-cpu">- I heard two employees are missing...</button><br>
+          <button type="button" class="option" data-target="task-cpu">- I don't know anyone named Eli, but what do you need help in?</button>
         </div>
 
+        <div class="scene" id="task-cpu">
+          <p>Oh maybe he's on vacation. Anyway, I came by here the other day and got two 4GB RAM DDR-1600 and 525GB SSD. It made my computer pretty fast, but I figured I might as well upgrade my CPU too and my motherboard if necessary. Maybe a new power supply now that I think about it.
+          </p><br>
+          <button type="button" class="option" data-target="task-cpu">- Honestly, I'm new and I don't know what you're talking about. Could you explain some of the stuff you mentioned? </button><br>
+          <button type="button" class="option" data-target="task-cpu">- Wow, sounds like you should just buy a brand-new computer!</button>
+        </div>
 
         
     </div>

@@ -7,6 +7,7 @@ $(document).ready(function() {
   var $defaultScene = $('.default-scene');
   var $allOptions = $('.option');
 
+  $('.inventory').hide();
   $allScenes.hide();
   $allOptions.hide();
   $defaultScene.fadeIn(200);
@@ -27,6 +28,10 @@ $(document).ready(function() {
       $allOptions.delay(5000).fadeIn('slow');
   	}
 
+    if(targetName == "help-info"){
+      $('.inventory').show();
+    }
+
     if(targetName == "transition"){
       $('.cat').hide();
     } else {
@@ -38,10 +43,3 @@ $(document).ready(function() {
 
 });
 
-function showCat() {
-  $('.cat').fadeIn('fast');
-}
-
-function hideCat() {
-  $('.cat').hide();
-}
