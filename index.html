@@ -23,73 +23,56 @@
       AMD Ryzen 7 1800X<br>
       AMD Ryzen 5 1600<br>
       AMD FX 8350
-
-
-
-
       </p>
     </div>
     <div class="middle-section">
       
-      <img src="images/cat.png" class="cat" id="floating" alt="cat" width="200px" height="200px" />
+      <img src="images/cat.png" class="cat" id="floating" alt="cat" width="200 px" height="250px" />
       <div class="main-content">
-        <div class="scene default-scene" id="start">
+        <div class="scene default-scene" id="intro">
           <p>Welcome to Ina's Computer Shop. We build and repair computers.<br><br>
+          Oh! You must be the one I was on the phone with last night. Congratulations! You’re the first to apply and your training starts today.<br> <br>
+          My name's Matt. I’m the best cat employee in this place and the only employee, actually. I’ve been in need of help ever since two of our employees disappeared all of a sudden. You heard about it, right?<br><br>
+          </p>
 
-          Oh! You must be the new trainee. My name's Matt: the best cat employee in this place and the best manager as of today. We've been in need of help ever since two of our employees disappeared all of a sudden. I hired someone last week, but he only comes in part-time.<br><br>
-
-          Anyway, I'm so glad you're here! Let's start. Do you have any background in computer hardware?</p><br>
-
-          <button type="button" class="option" default-option" data-target="task-intro">- Honestly, no. But I'd love to learn!</button><br>
-          <button type="button" class="option" default-option" data-target="no-test">- Sure, I use computers all the time! Mostly for memes.</button>
+          <button type="button" class="option" default-option" data-target="backstory">- What happened? </button><br>
+          <button type="button" class="option" default-option" data-target="no-story">- Yes, it must have been devastating for you.</button>
         </div>
 
-        <div class="scene" id="no-test">
-          <p>MReally? Well, it doesn't matter. It's only a test of basic knowledge of computer hardware. I'm sure you have some kind of foundation. If not, well then I guess you'll learn a lot today! </p><br>
+        <div class="scene" id="backstory">
+          <p>Well we’ve been working for several months together -- me, Byrnes, and Haku. Everything was going well. Most of the days I stay in the back doing repairs while the two tend to the customers in the front of the shop, depending on their schedule. We were a solid team, you know? We even had dinner once a week and really got to know each other. <br><br>
+          Until one day, I had to take a day off to pay my respects for my wife, Ina. You know, I built this shop for her a few weeks after she passed. It was one of her dreams to set up a neighborhood shop where people can get quality hardware locally and have weekly classes about computers and technology. I miss her very much...<br><br>
+          Anyway, when I got back the next day everything was gone! The only remaining things are the stuff in the back since I’m the only one who has access to it. <br><br>
+          </p>
 
-          <button type="button" class="option" data-target="task-intro">- I guess so!</button>
+          <button type="button" class="option" data-target="task-intro">- Wow, that’s unbelievable. Don’t worry I’ll help you as much as I can.</button>
+        </div>
+
+        <div class="scene" id="no-story">
+          <p>Actually, I haven’t told anyone yet. So I’m not sure how you would’ve known. The incident only happened two days ago and the shop has been closed on days it would be regularly closed.<br><br>
+          I guess it will be a bit harder for me to trust you…<br><br>
+          </p>
+
+          <button type="button" class="option" data-target="back-story">- I’m sorry, I just wanted to impress you. So what happened?</button><br>
+          <button type="button" class="option" data-target="reason-for-test">- That’s not fair. You were testing me just now.</button>
+        </div>
+
+        <div class="scene" id="reason-for-test">
+          <p>Of course, I have to test you! I have to be more picky about who I work with and who to entrust the shop with. It may be just an ordinary store to you, but for me it has a sentimental meaning I hold dearly in my heart. Now do you want to hear what happened?<br><br><p>
+
+          <button type="button" class="option" data-target="backstory">- I’m sorry for being defensive. And yes, I’d like to hear the story, please.</button>
         </div>
 
         <div class="scene" id="task-intro">
-          <p>As a newbie, I'll have you start out with computer components.<br><br>
+          <p>Alright, then. First of all, I want to gauge how much you know about computer components. That’s fundamental with helping out customer concerns. Then, I’ll have you organize the inventory. The last step is actually interacting with the customers. Sounds fun, right? <br><br>
+          I will be in the back doing repairs. But I recently installed cameras, so I’ll be watching and keeping score. I’ll share your score with you, so you know where to improve. <br><br>
+          Let’s start!<br><br>
+          </p>
 
-          We get a lot of customers that want to build their own computer. You'll be in charge of finding the specific parts they need and explaining their purpose. You also have to clarify any questions and concerns they have.<br><br>
-
-          Sounds easy, right? I'll be in the back doing repairs, but don't forget: I'm always watching. </p>
-          <br>
-
-          <button type="button" class="option" data-target="help-info">- Yes, sir.</button><br>
-          <button type="button" class="option" data-target="help-info">- What if I need help?</button>
+          <button type="button" class="option" data-target="level1">- I'm ready</button>
         </div>
 
-        <div class="scene" id="help-info">
-        <p>I'll allow you to have three mistakes, but if you keep messing up then unfortunately, that's the end for you.<br><br>
 
-        By the way, here's the inventory list. Most of everything's out here in the front, but let me know if we're missing anything and I'll find it for you. <br><br>
-
-        Good luck!<br><p>
-
-        <button type="button" class="option" data-target="transition">- Thank you!</button>
-        </div>
-
-        <div class="scene" id="transition">
-          <p>Wow, my first day. I'm so nervous. I hope there are no customers today.<br><br>
-          Maybe I should read up on computer basics online.</p><br>
-          <button type="button" class="option" data-target="customer1">*A small child walks in*</button>
-        </div>
-
-        <div class="scene" id="customer1">
-          <p>Hey Eli, I need help with-- Wait, where's Eli? He told me last week he'd be working everyday this week.</p><br>
-          <button type="button" class="option" data-target="task-cpu">- I heard two employees are missing...</button><br>
-          <button type="button" class="option" data-target="task-cpu">- I don't know anyone named Eli, but what do you need help in?</button>
-        </div>
-
-        <div class="scene" id="task-cpu">
-          <p>Oh maybe he's on vacation. Anyway, I came by here the other day and got two 4GB RAM DDR-1600 and 525GB SSD. It made my computer pretty fast, but I figured I might as well upgrade my CPU too and my motherboard if necessary. Maybe a new power supply now that I think about it.
-          </p><br>
-          <button type="button" class="option" data-target="task-cpu">- Honestly, I'm new and I don't know what you're talking about. Could you explain some of the stuff you mentioned? </button><br>
-          <button type="button" class="option" data-target="task-cpu">- Wow, sounds like you should just buy a brand-new computer!</button>
-        </div>
 
         
     </div>
